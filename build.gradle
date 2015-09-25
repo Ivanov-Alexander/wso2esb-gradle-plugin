@@ -14,18 +14,18 @@ repositories {
 }
 
 group = 'com.epam.ai'
-version = '1.2-SNAPSHOT'
+version = '1.2'
 
 
 pluginBundle {
-	website = 'https://Ivanov-Alexander@bitbucket.org/Ivanov-Alexander/wso2esb-gradle-plugin.git'
-	vcsUrl = 'https://Ivanov-Alexander@bitbucket.org/Ivanov-Alexander/wso2esb-gradle-plugin.git'
+	website = 'https://github.com/Ivanov-Alexander/wso2esb-gradle-plugin'
+	vcsUrl = 'https://github.com/Ivanov-Alexander/wso2esb-gradle-plugin.git'
 
 	plugins {
 		wso2plugin {
 			id = 'com.epam.ai.wso2esb-gradle-plugin'
 			displayName = 'WSO2 ESB Gradle Plugin'
-			version = '1.1'
+			version = '1.2'
 			tags = ['wso2', 'esb', 'wso2esb']
 			description = 'WSO2 ESB Gradle Plugin'
 		}
