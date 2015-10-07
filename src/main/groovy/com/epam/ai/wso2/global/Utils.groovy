@@ -1,24 +1,17 @@
 package com.epam.ai.wso2.global
 
 class Utils {
-	static final Map<String, String> ELEMENT_TO_ARTIFACT_TYPE_MAPPING = new HashMap<String, String>() {
-		{
-			put("api", "api")
-			put("localEntry", "local-entry")
-			put("sequence", "sequence")
-			put("proxy", "proxy-service")
-			put("endpoint", "endpoint")
-		}
-	}
+	static final Map<String, String> ELEMENT_TO_ARTIFACT_TYPE_MAPPING = ['api'       : 'api',
+	                                                                     'localEntry': 'local-entry',
+	                                                                     'sequence'  : 'sequence',
+	                                                                     'proxy'     : 'proxy-service',
+	                                                                     'endpoint'  : 'endpoint']
 
-	static final Map<String, String> FOLDER_TO_ARTIFACT_TYPE_MAPPING = new HashMap<String, String>() {
-		{
-			put("api", "api")
-			put("message-stores", "message-store")
-			put("message-processors", "message-processors")
-			put("templates", "template")
-		}
-	}
+
+	static final Map<String, String> FOLDER_TO_ARTIFACT_TYPE_MAPPING = ['api'               : 'api',
+	                                                                    'message-stores'    : 'message-store',
+	                                                                    'message-processors': 'message-processors',
+	                                                                    'templates'         : 'template']
 
 	static String generateArtifact(String name, String type, String version) {
 		return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><artifact name=\"$name\" version=\"$version\" type=\"synapse/$type\" serverRole=\"EnterpriseServiceBus\">\n\t<file>$name" + ".xml</file>\n</artifact>"
